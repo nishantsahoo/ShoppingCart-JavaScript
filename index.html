@@ -1,0 +1,142 @@
+<html>
+<head>
+  <title>MyCart</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:Condensed" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="jquery.js"></script>
+
+</head>
+<body>
+<div id="container">
+
+  <!-- Products -->
+  <div class="card" style="min-width: 35rem; float: left; margin-left: 5em; margin-right: 2em; margin-top: 8em;">
+  <!-- Card Header -->
+  <div class="card-header">Products</div>
+    <!-- Card Block -->
+    <div class="card-block">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Product Name</th>
+            <th>Price (Rs.)</th>
+            <th>Quantity</th>
+            <th>Add to Cart</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <!-- Product_1 -->
+          <tr>
+
+            <td id="1" name="Name">
+              <product id="1">Product_1<product>
+            </td>
+
+            <td id="1" name="Cost">
+              <cost id="1">1500</cost>
+            </td>
+
+            <td id="1" name="Quantity" style="font: monospace;">
+              <button id="1" name="minus" class="red" style="float: left;">-</button>
+              <quantity id="1"></quantity>
+              <button id="1" name="plus" class="green" style="float: right;">+</button>
+            </td>
+
+            <td>
+              <button id="1" style="margin-left: 0.85em" name="add-to-cart" class="purple">Add to Cart</button>
+            </td>
+
+          </tr>
+
+          <!-- Product_2 -->
+          <tr>
+
+            <td id="2" name="Name">
+              <product id="2">Product_2<product>
+            </td>
+
+            <td id="2" name="Cost">
+              <cost id="2">400</cost>
+            </td>
+
+            <td id="2" name="Quantity" style="font: monospace;">
+              <button id="2" name="minus" class="red" style="float: left;">-</button>
+              <quantity id="2"></quantity>
+              <button id="2" name="plus" class="green" style="float: right;">+</button>
+            </td>
+
+            <td>
+              <button id="2" style="margin-left: 0.85em" name="add-to-cart" class="purple">Add to Cart</button>
+            </td>
+
+          </tr>
+
+          <!-- Product_3 -->
+          <tr>
+
+            <td id="3" name="Name">
+              <product id="3">Product_3<product>
+            </td>
+
+            <td id="3" name="Cost">
+              <cost id="3">3770</cost>
+            </td>
+
+            <td id="3" name="Quantity" style="font: monospace;">
+              <button id="3" name="minus" class="red" style="float: left;">-</button>
+              <quantity id="3"></quantity>
+              <button id="3" name="plus" class="green" style="float: right;">+</button>
+            </td>
+
+            <td>
+              <button id="3" style="margin-left: 0.85em" name="add-to-cart" class="purple">Add to Cart</button>
+            </td>
+
+          </tr>
+
+        </tbody>
+      </table>
+      
+    </div>
+  </div>
+
+
+  <!-- Cart -->
+  <div class="card" style="min-height: 19.6rem; min-width: 30rem; float: left; margin-left: 2em; margin-right: 5em; margin-top: 8em;">
+  <!-- Card Header -->
+  <div class="card-header">Cart</div>
+  <!-- Card Block -->
+  <div class="card-block" id="cart">
+    <!-- List Group -->
+    <ul class="list-group list-group-flush" id="cartItems">
+      <div class="card-header">
+        You have <span class="noOfProducts" id="noOfProducts"></span> product(s) in your cart!
+      </div>
+      <table class="table table-bordered">
+
+        <thead id="cartItemsHead"></thead>
+        <tbody id="cartItemsBody"></tbody>
+
+      </table>
+    </ul>
+  </div>
+  <div class="card-header">
+  <p><span id="totcost">Total Cost: Rs. <span id="totalCost"></span></span></p>
+  <button name="clear-cart" class="blue" style="float: right;">Clear Cart</button>
+  </div>
+
+  </div>
+  
+  
+</div>
+
+</body>
+</html>
