@@ -2,9 +2,7 @@
 
 $(function () {
 
-	var no_of_products = 0;
-    var total_cost = 0;
-
+	var done = false;
     function setTotalCost() {
     	if (localStorage.getItem('total_cost') ) {
     		total_cost = +localStorage.getItem('total_cost');
@@ -30,12 +28,15 @@ $(function () {
     } // end of the function setNoOfProucts
 
     function updateCart() {
+    	
     	no_of_products = +localStorage.getItem('no_of_products');
     	if (no_of_products) {
-    		if (no_of_products == 1) {
+    		if (!done) {
+    			console.log(no_of_products);		
     			var cart_head = $('#cartItemsHead');
     			var head_string = "<tr><th>Product Name</th><th>Quantity</th><th>Amount</th><tr>";
     			cart_head.append(head_string);
+    			done = true;
     		}
 
     		// display using cart.append
@@ -93,14 +94,14 @@ $(function () {
     	var cart_head = $('#cartItemsHead');
     	cart_head.empty(); // to remove the child elements
     	var cart_body = $('#cartItemsBody');
-    	cart_body.empty();
-
+    	cart_body.empty(); // to remove the child elements
+    	done = false;
     } // end of the function reset
 
     function qtyDecrement(qty_id) {
     	if (($('quantity[id=' + qty_id + ']').text())>1) { // Quantity can't be lesser than 1
     		var x = +$('quantity[id=' + qty_id + ']').text();
-    	$('quantity[id=' + qty_id + ']').text(--x);	
+    	$('quantity[i`d=' + qty_id + ']').text(--x);	
     	}
     } // end of the function qtyDecrement
 
@@ -164,6 +165,7 @@ $(function () {
     		cartRefresh(); // call of the function cartRefresh
     		$('quantity[id=' + this.id + ']').text(1);
     	}
+    	
     	if (this.name == "clear-cart") {
     		reset(); // call of the function reset
     		for (var i = 3; i >= 1; i--) {

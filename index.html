@@ -17,7 +17,7 @@
 <div id="container">
 
   <!-- Products -->
-  <div class="card" style="min-width: 35rem; float: left; margin-left: 5em; margin-right: 2em; margin-top: 8em;">
+  <div class="card" style="min-width: 35rem; float: left; margin-left: 6em; margin-right: 3.8em; margin-top: 8em;">
   <!-- Card Header -->
   <div class="card-header">Products</div>
     <!-- Card Block -->
@@ -108,35 +108,32 @@
     </div>
   </div>
 
-
   <!-- Cart -->
-  <div class="card" style="min-height: 19.6rem; min-width: 30rem; float: left; margin-left: 2em; margin-right: 5em; margin-top: 8em;">
-  <!-- Card Header -->
-  <div class="card-header">Cart</div>
-  <!-- Card Block -->
-  <div class="card-block" id="cart">
-    <!-- List Group -->
-    <ul class="list-group list-group-flush" id="cartItems">
+    <div class="card" style="min-height: 19.6rem; min-width: 30rem; float: left; margin-left: 4em; margin-right: 5em; margin-top: 8em;">
+    <!-- Card Header -->
+    <div class="card-header">Cart</div>
+    <!-- Card Block -->
+    <div class="card-block" id="cart">
+      <!-- List Group -->
+      <ul class="list-group list-group-flush" id="cartItems">
+        <div class="card-header">
+          You have <span class="noOfProducts" id="noOfProducts"></span> product(s) in your cart!
+        </div>
+        <table class="table table-bordered">
+
+          <thead id="cartItemsHead"></thead>
+          <tbody id="cartItemsBody"></tbody>
+
+        </table>
+      </ul>
+    </div>
       <div class="card-header">
-        You have <span class="noOfProducts" id="noOfProducts"></span> product(s) in your cart!
+      <p><span id="totcost">Total Cost: Rs. <span id="totalCost"></span></span></p>
+      <button name="clear-cart" class="blue" style="float: right;">Clear Cart</button>
       </div>
-      <table class="table table-bordered">
 
-        <thead id="cartItemsHead"></thead>
-        <tbody id="cartItemsBody"></tbody>
-
-      </table>
-    </ul>
+    </div>
   </div>
-  <div class="card-header">
-  <p><span id="totcost">Total Cost: Rs. <span id="totalCost"></span></span></p>
-  <button name="clear-cart" class="blue" style="float: right;">Clear Cart</button>
-  </div>
-
-  </div>
-  
-  
-</div>
 
 </body>
 </html>
