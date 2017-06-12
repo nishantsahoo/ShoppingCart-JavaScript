@@ -101,7 +101,7 @@ $(function () {
     function qtyDecrement(qty_id) {
     	if (($('quantity[id=' + qty_id + ']').text())>1) { // Quantity can't be lesser than 1
     		var x = +$('quantity[id=' + qty_id + ']').text();
-    	$('quantity[i`d=' + qty_id + ']').text(--x);	
+    	$('quantity[id=' + qty_id + ']').text(--x);	
     	}
     } // end of the function qtyDecrement
 
@@ -109,8 +109,6 @@ $(function () {
     	var x = +$('quantity[id=' + qty_id + ']').text();
     	$('quantity[id=' + qty_id + ']').text(++x);
     } // end of the function qtyIncrement
-
-
 
     $("button").click(function() { // button click function
 
