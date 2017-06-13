@@ -101,8 +101,10 @@ $(function () {
         var cButtonsPlus = $('button[name="cplus"]');
         var cButtonsMinus = $('button[name="cminus"]');
         for (var i = 0; i < 3 ; i++) {
+            if (cButtonsMinus[i]) {
             cButtonsMinus[i].style.float = "left";
             cButtonsPlus[i].style.float = "right";
+            }
         }
     }
 
