@@ -116,7 +116,7 @@ $(function () {
     } // end of the function cartRefresh
 
     function init() {
-
+        // setTable
     	for (var i = 1; i <= 3 ; i++) {
     		$('quantity[id=' + i +']').text(1);
     	}
@@ -212,16 +212,6 @@ $(function () {
     		qtyDecrement(this.id); // decrease quantity by 1
     	}
 
-    	if (this.name == "cminus") {
-
-    		cartRefresh(); // call of the function cartRefresh
-    	}
-
-    	if (this.name == "cplus") {
-    		
-    		cartRefresh(); // call of the function cartRefresh
-    	}
-
     	if (this.name == "add-to-cart") {
     		var qty = +$('quantity[id=' + this.id + ']').text();
     		var cost = +$('cost[id=' + this.id + ']').text();
@@ -240,7 +230,7 @@ $(function () {
 	    			'id': this.id,
 	    			'quantity': qty
 	    		};
-	    		localStorage.setItem('prod_' + this.id, JSON.stringify(newcartItem));	
+	    		localStorage.setItem('prod_' + this.id, JSON.stringify(newcartItem));
 	    	}
     		
     		cartRefresh(); // call of the function cartRefresh
